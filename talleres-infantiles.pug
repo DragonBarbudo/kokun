@@ -1,0 +1,75 @@
+include app/lib/_mixin
+
+doctype html
+html(lang="es")
+
+	+head
+		title Taller infantil | musica niños | clases ballet
+		meta(name="keywords" content="Taller infantil, musica niños, clases ballet, Taller infantil, Taller infantil")
+		meta(name="description" content="Taller infantil, musica niños, clases ballet, si un taller infantil buscas con musica niños, tae kan do infantil, zumba infantil, los talleres de musica niños cuentan con la mejor estancia infantil para niños")
+		link(rel="canonical" href="http://kokundaycare.com.mx/talleres-infantiles.html")
+
+	body
+
+
+		+header('Kokun Kids')
+
+		.container: .notification.is-orange.has-text-centered TALLERES VESPERTINOS
+
+		section.section: .container
+			.columns
+				.column.is-6.is-offset-3: h2.has-text-centered.text-purple Kokun Kids Talleres Multifuncionales para Niños
+			.columns
+				.column.is-6
+					h4.text-green.mt.mb.is-size-5 Cuidamos a tu hijo como si fuera nuestro
+					p.text-blue Cada niño es especial y todos los días nos encargamos de brindarle el cariño y atención que merece.
+					
+					h4.text-orange.mt.mb.is-size-5 Talleres Vespertinos
+					p: strong Talleres vespertinos para niños de 2 a 8 años
+					p Estos talleres han sido creados pensando en las necesidades de los niños del siglo XXI; niños dinámicos creativos, independientes que buscan aprender y divertirse en un ambiente seguro.
+				.column.is-6
+					img(src="app/img/talleres-vespertinos-kokun.jpg", alt="Talleres vespertinos").is-fluid
+		
+		
+		
+		section.section: .container
+			.columns
+				.column.is-6.is-offset-3: h2.has-text-centered.text-orange  Talleres que Kokun Kids ofrece son
+			.columns.is-multiline
+				each con, index in ['Ballet', 'Zumba Kids', 'Minibuilders', 'Crossfit Kids', 'Visión Extraocular', 'Arte y Reciclado', 'Taller de Música', 'Arte y Emoción', 'Tae Kwon Do']
+					- var count = index+1; 
+					.column.is-4
+						.card.kokun-card
+							a(href="#").card-image
+								figure.image
+									img(src="app/img/talleres-kokun-"+count+".jpg", alt=con)
+									div(class='is-'+colorList[index]).hovertext: p.is-size-4 #{con}
+							.card-content.has-text-centered: p(class='text-'+colorList[index]).is-size-4 #{con}
+
+	
+
+		section.section.is-blue
+			.container
+				.columns
+					.column.is-10.is-offset-1
+						h2.has-text-centered.text-white Además uno de nuestros valores agregados son nuestros Programas Educativos
+						p.has-text-centered Award Winnings Programs
+				.columns.mt-mb
+					.column.is-3: .award.is-blue: p CREATIVE CURRICULUM
+					.column.is-3: .award.is-green: p CSEFEL
+					.column.is-3: .award.is-purple: p LEARNING EXPEDITIONS METHOLOGY
+					.column.is-3: .award.is-orange: p HOUGHTON MIFFLIN 
+		section.section: .container
+			.columns
+				.column.is-6.has-text-centered
+					img(src="app/img/award_1.png", alt="")
+				.column.is-6.has-text-centered
+					img(src="app/img/award_2.png", alt="").mt
+					
+					
+		+contamoscon('is-purple')
+
+
+
+		+footer
+		+scripts

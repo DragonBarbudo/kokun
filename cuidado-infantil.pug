@@ -1,0 +1,73 @@
+include app/lib/_mixin
+
+doctype html
+html(lang="es")
+
+	+head
+		title cuidado infantil | seguridad niños | guarderia express
+		meta(name="keywords" content="cuidado infantil, seguridad niños, guarderia express, padres de familia, bebes, juegos infantiles, actividades infantiles")
+		meta(name="description" content="cuidado infantil, seguridad niños, guarderia express, con seguridad niños, la guarderia kokun se enfoca en la seguridad niños, cuidado infantil  y seguridad niños, la guarderia express tiene gran seguridad niños la  seguridad niños para todos los infantes es profesional con la seguridad niños en la guarderia una seguridad niños es basica")
+		link(rel="canonical" href="http://kokundaycare.com.mx/cuidado-infantil.html")
+
+	body
+
+		+header('Contacto')
+		.maps-container
+			.maps.is-overlay
+				div
+					| <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1961.2159970420087!2d-99.19845267394221!3d19.427597610295685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d201f8e4a4a4b9%3A0x173e878c4c11d1d0!2sAprendo+Jugando+S.C.!5e0!3m2!1ses!2smx!4v1502753036081" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+				div
+					|<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.5596643602016!2d-99.16740058526443!3d19.431422586884963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff35297e79b7%3A0x5b124b9df72f7b18!2sKOKUN!5e0!3m2!1ses!2smx!4v1502753102817" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+			.maps-menu.has-text-centered
+				div.is-blue.button Kokun Polanco
+				div.is-blue.button Kokun Reforma
+		
+		.container: .notification.is-orange.has-text-centered EDUCACIÓN Y PROGRAMAS EDUCATIVOS
+
+		section.section: .container
+			.columns
+				.column.is-6.is-offset-3: h2.has-text-centered.text-purple ¿Quiéres más información?<br>Envíanos un mensaje
+			.columns
+				.column.is-3
+					p Lunesa a Viernes 
+					p.text-green.is-size-4 7 am - 7 pm
+				.column.is-6
+					form
+						.field.is-horizontal
+							.field-body
+								.field: .control.has-icons-left
+									input(type="text" placeholder="Nombre").input
+									span.icon.is-small.is-left: i.fa.fa-user
+								.field: .control.has-icons-left
+									input(type="text" placeholder="Correo").input
+									span.icon.is-small.is-left: i.fa.fa-envelope
+						.field.is-horizontal
+							.field-body
+								.field: .control.has-icons-left
+									input(type="text" placeholder="Asunto").input
+									span.icon.is-small.is-left: i.fa.fa-question
+								.field: .control.has-icons-left
+									input(type="text" placeholder="Teléfono").input
+									span.icon.is-small.is-left: i.fa.fa-phone
+						.field.is-horizontal
+							.field-body
+								.field: .control
+									textarea(placeholder="Mensaje").textarea
+						.field
+							.field-body
+								button(type="Submit").button.is-green Enviar
+						
+				.column.is-3
+					p.text-green.is-size-5 Guarderia en Polanco
+					p Calle Julio Verne 18, Polanco V Sec, CDMX CP 11560.
+					
+					p.text-green.is-size-5 Guarderia en Reforma
+					p Río Rhin No. 47, Col Cuahutémoc, CDMX CP 06500.
+		
+		
+		
+
+
+
+		+footer
+		+scripts

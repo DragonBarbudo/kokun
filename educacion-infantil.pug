@@ -1,0 +1,85 @@
+include app/lib/_mixin
+
+doctype html
+html(lang="es")
+
+	+head
+		title educacion infantil | programa educativo | guarderia df
+		meta(name="keywords" content="educacion infantil, programa educativo, guarderia, estimulacion temprana, atención psicopedagógica,  desarrollo psicomotriz, atencion Socio Emocional educacion Cognitiva, terapia Lingüística")
+		meta(name="description" content="educacion infantil, programa educativo, guarderia, al hablar de educacion infantil kokun cuenta con programas educativos de estimulacion, desde atencion psicopedagogica, hasta desarrollo psicomotriz, mediante educacion cognitiva para tener la seguridad de que tu hijo cuenta con la educacion que necesita.")
+		link(rel="canonical" href="http://kokundaycare.com.mx/educacion-infantil.html")
+
+	body
+	
+		+header('Educación')
+
+		.container: .notification.is-orange.has-text-centered EDUCACIÓN Y PROGRAMAS EDUCATIVOS
+		
+		section.section: .container
+			.columns
+				.column.is-6.is-offset-3: h2.has-text-centered.text-purple Programas educativos para niños del siglo XXI
+			.columns
+				.column.is-12
+					p.is-size-5.text-gray.mb Contamos con dos programas norteamericanos especializados en Educación Temprana:
+					p Es un grupo de Mamás, Papás y Maestra que se reúnen con sus Bebés cada semana para interactuar (desarrollar competencias como Padres), recibir apoyo (Confianza) y disfrutar mutuamente.
+					.section
+						ul
+							li Creative Curriculum” cuya base es crear experiencias de aprendizaje a través de las fortalezas, necesidades y de la etapa de desarrollo en la que se encuentre el alumno. Este programa cuenta con acreditaciones de la NAFCC en los Estados Unidos.
+							li CSEFEL cuyo objetivo es promover las aptitudes socio-emocionales en niños pequeños y prevenir y mejorar el comportamiento difícil. Este programa cuenta con la acreditación de la Vanderbilt University.
+					p Así, tus pequeños reciben los programas de los diversos sistemas educativos que les permitirán establecer las bases del aprendizaje para el resto de su vida. Nuestro equipo de educadoras guía y evalúa diariamente el progreso de tu hijo. Cada trimestre, ustedes reciben un Perfil Infantil que incluye sus logros y avances. De igual manera, sabemos de la importancia del manejo de otro idioma, por lo que tu hijo realiza actividades en inglés duramente dos horas al día.
+					h4.text-orange.mt.mb.is-size-5 Desarrollamos habilidades para el futuro
+			.columns
+				.column.is-6
+					h4.text-blue.mt.mb.is-size-4 Buscamos el desarrollo de las cuatro áreas más importantes del aprendizaje infantil:
+					ul
+						li Física
+						li Socio-Emocional
+						li Cognitiva
+						li Lingüística
+				.column.is-6
+					h4.text-blue.mt.mb.is-size-4 Trabajamos para que cada día, tu pequeño aprenda sobre:
+					ul
+						li Sí mismo y los demás
+						li El movimiento
+						li El mundo que lo rodea
+						li La comunicación
+		
+		
+		
+		section.section: .container
+			.columns
+				.column.is-8.is-offset-2: h2.text-orange.has-text-centered Programa Multisensorial Bilingüe
+			.columns
+				.column.is-5.is-offset-1
+					img(src="app/img/programa-multisensorial-kokun.jpg", alt=" Programa Multisensorial Bilingüe").push-leftImg
+
+				.column.is-6
+					h3.text-green.mb Programa Bilingüe
+					p Para nosotros es fundamental promover ennuestros pequeños el contacto con una segunda lengua (inglés) a través de la enseñanza multisensorial
+					p.mt.is-gray.is-size-6 Esto significa ayudarles a aprender usando todos los sentidos al realizar actividades constantes, donde el tacto, el movimiento, la vista y el oído den a sus cerebros memorias para combinar y despertar sus áreas multilingües.
+		
+
+		section.section.is-blue
+			.container
+				.columns
+					.column.is-6.is-offset-3: h2.has-text-centered.text-white Award Winning Programs
+				.columns.mt-mb
+					.column.is-3: .award.is-blue: p CREATIVE CURRICULUM
+					.column.is-3: .award.is-green: p CSEFEL
+					.column.is-3: .award.is-purple: p LEARNING EXPEDITIONS METHOLOGY
+					.column.is-3: .award.is-orange: p HOUGHTON MIFFLIN 
+		section.section: .container
+			.columns
+				.column.is-6.has-text-centered
+					img(src="app/img/award_1.png", alt="")
+				.column.is-6.has-text-centered
+					img(src="app/img/award_2.png", alt="").mt
+				
+		+contamoscon('is-purple')
+		
+		+serviciosOfrece('is-blue')
+
+		
+
+		+footer
+		+scripts

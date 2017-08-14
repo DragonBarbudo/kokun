@@ -1,0 +1,87 @@
+include app/lib/_mixin
+
+doctype html
+html(lang="es")
+
+	+head
+		title Guarderia Reforma | estimulacion temprana | infantil
+		meta(name="keywords" content="Guarderia Reforma, estimulacion temprana, infantil, cuidado niños, centro infantil, guarderia, maternal, niños, educacion, cuidado infantil, jardin pre-escolar, estancia infantil, cuidado bebés, juegos infantiles")
+		meta(name="description" content="Guarderia en Reforma, estimulacion temprana, cuidado niños, son palabras que describen a la guarderia infantil con servicio en estimulacion temprana, maternal, estimulacion temprana para niños desde bebes hasta grandes, en educacion y estimulacion temprana mira hacia el bien de los niños la estimulacion temprana apoya a bebes pues la estimulacion temprana para bebes, estimulacion temprana para niños, estimulacion temprana para niñas, estimulacion temprana para niños especiales")
+		link(rel="canonical" href="http://kokundaycare.com.mx/")
+
+	body
+
+		+header('Home')
+
+		img(src="app/img/guarderia-en-reforma.jpg", alt="Guardería en Reforma").is-fluid
+
+		.container: .notification.is-purple.has-text-centered THE PERFECT BALANCE OF LEARNING AND PLAY IN A FUN, SAFE AND NURTURING ENVIRONMENT
+
+		section.section: .container
+			.columns
+				.column.is-8: h2.text-purple Para nosotros cada niño es único, especial y tiene un potencial ilimitado
+			.columns
+				.column.is-5.is-offset-1
+					h3.text-green.mb En Kokun somos...
+					p Somos un grupo de personas y especialistas en educación temprana y preescolar brindando todo nuestro amor y respeto a cada uno de los pequeños a nuestro cuidado.
+					p Nos esmeramos en conocer a cada niño y niña, desde sus hábitos de dormir,  hasta la comida que más les gusta
+					h4.has-text-centered.text-orange.mt.mb "Cuidado Sensible y receptivo Kokun"
+					p Trabajamos todos los días para  que a través del amor, respeto y confianza se conviertan en seres humanos de valores extraordinarios.
+				.column.is-6
+					img(src="app/img/educacion-temprana.jpg", alt="Educación temprana").is-fluid
+
+		section.section.is-blue
+			.container
+				.columns
+					.column.is-6.is-offset-3: h2.has-text-centered.text-white Kokun es un lugar cálido, confortable y estimulante
+				.columns
+					.column.is-5.is-offset-1
+						p.text-white Sabemos que el entorno estimula y fomenta la exploración favoreciendo el desarrollo de habilidades cogitivas y psico-motrices, es por eso que nuestras instalaciones  están especialmente diseñadas para brindar el soporte físico y emocional que nuestros pequeños necesitan.
+						img(src="app/img/kokun-lugar-calido.jpg", alt="Lugar cálido").push-leftImg.mt
+					.column.is-6
+						img(src="app/img/kokun-confortable-y-estimulante.jpg", alt="Confortable y estimulante").mb
+						p Los espacios, el mobiliario y los materiales didácticos que se utilizan diariamente, cumplen con las especificaciones de seguridad e higiene que marca un programa de alta calidad en Educación Temprana.
+
+		section.section.kokun-hogar
+			.container
+				.columns
+					.column.is-6.is-offset-3: h2.has-text-centered.text-purple Kokun es el Mejor Hogar fuera de Casa
+			.columns.mt2: .column.is-10.is-offset-1: .columns
+				.columns
+					.column.is-4
+						.card.kokun-card
+							a(href="guarderia.html").card-image
+								figure.image
+									img(src="app/img/kokun-daycare.jpg", alt="DayCare")
+									.hovertext.is-blue
+										p.is-size-3 Day Care
+							.card-content.has-text-centered
+								p.is-size-3.text-blue DayCare
+								p En nuestro Day Care recibimos a pequeños desde 45 día de nacidos hasta los 3 años
+								p: a(href="guarder.html").text-purple Ver más
+					.column.is-4
+						.card.kokun-card
+							a(href="guarderia.html").card-image
+								figure.image
+									img(src="app/img/kokun-after-school.jpg", alt="After School")
+									.hovertext.is-green
+										p.is-size-3 After School
+							.card-content.has-text-centered
+								p.is-size-3.text-green After School
+								p Te invitamos a descubrir las diferentes actividades que tenemos por las tardes especialmente para tus pequeños.
+								p: a(href="guarder.html").text-purple Ver más
+					.column.is-4
+						.card.kokun-card
+							a(href="guarderia.html").card-image
+								figure.image
+									img(src="app/img/kokun-talleres.jpg", alt="Talleres")
+									.hovertext.is-purple
+										p.is-size-3 Talleres
+							.card-content.has-text-centered
+								p.is-size-3.text-purple Talleres
+								p En Kokun encontrarás un espacio de diversión y recreación, al mismo tiempo que trabajas las diferentes áreas del aprendizaje infantil.
+								p: a(href="talleres-infantiles.html").text-purple Ver más
+
+
+		+footer
+		+scripts

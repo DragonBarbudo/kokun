@@ -1,0 +1,78 @@
+include app/lib/_mixin
+
+doctype html
+html(lang="es")
+
+	+head
+		title Guarderia Reforma | estimulacion temprana | infantil
+		meta(name="keywords" content="Guarderia Reforma, estimulacion temprana, infantil, cuidado niños, centro infantil, guarderia, maternal, niños, educacion, cuidado infantil, jardin pre-escolar, estancia infantil, cuidado bebés, juegos infantiles")
+		meta(name="description" content="Guarderia en Reforma, estimulacion temprana, cuidado niños, son palabras que describen a la guarderia infantil con servicio en estimulacion temprana, maternal, estimulacion temprana para niños desde bebes hasta grandes, en educacion y estimulacion temprana mira hacia el bien de los niños la estimulacion temprana apoya a bebes pues la estimulacion temprana para bebes, estimulacion temprana para niños, estimulacion temprana para niñas, estimulacion temprana para niños especiales")
+		link(rel="canonical" href="http://kokundaycare.com.mx/daycare-preschool.html")
+
+	body
+	
+		+header('Nosotros')
+
+		
+		.container: .notification.is-orange.has-text-centered SOBRE NUESTRA GUARDERÍA
+		
+		section.section: .container
+			.columns
+				.column.is-6.is-offset-3: h2.has-text-centered.text-purple Aquí nos ocupamos de querer y cuidar a tu pequeño como si fuera nuestro
+			.columns
+				.column.is-5.is-offset-1
+					p Un grupo de personas y especialistas en educación temprana y preescolar brindando todo nuestro amor y respeto a cada uno de los pequeños a nuestro cuidado. Nos esmeramos en conocer a cada niño y niña, desde sus hábitos de dormir, hasta la comida que más les gusta.
+					h4.text-orange.mt.mb.is-size-5 “Cada niño es especial y todos los días nos encargamos de brindarle el cariño y atención que merece.”
+				
+				.column.is-5
+					p Trabajamos todos los días para que a través del amor, respeto y confianza se conviertan en seres humanos de valores extraordinarios 
+					h4.text-blue.mt.mb.is-size-5.has-text-centered “Sabemos lo importante que es tu pequeño para ti.”
+					p Por ello, desarrollamos un espacio donde tus hijos pueden estar desde los 45 días hasta los 6 años de edad. Aquí aprenderán sobre sí mismos y el mundo que los rodea en un ambiente de amor.
+				
+		
+		section.section.is-blue
+			.container
+				.columns
+					.column.is-6: h2.text-white En Kokun los valores son
+				.columns.slick-valores-menu
+				- var valores = ['Amor', 'Compromiso', 'Seguridad', 'Respeto', 'Comunicación', 'Excelencia']
+				- var valoresText = []
+				- valoresText.push('En Kokun, nos ocupamos de querer y cuidar a los pequeños como si fueran nuestros.')
+				- valoresText.push('En Kokun, nos ocupamos de querer y cuidar a los pequeños como si fueran nuestros.')
+				- valoresText.push('En Kokun, nos ocupamos de querer y cuidar a los pequeños como si fueran nuestros.')
+				- valoresText.push('En Kokun, nos ocupamos de querer y cuidar a los pequeños  como si fueran nuestros.')
+				- valoresText.push('En Kokun, nos ocupamos de querer y cuidar a los pequeños  como si fueran nuestros.')
+				- valoresText.push('En Kokun, nos ocupamos de querer y cuidar a los pequeños  como si fueran nuestros.')
+				.valores-slider-menu
+					each val in valores
+						h2.is-size-5.has-text-centered-mobile #{val}
+				.valores-slider.mt2
+					each val, index in valores
+						div
+							.columns
+								.column.is-5.is-offset-1
+									img(src="app/img/valores-kokun.jpg", alt="Los valores Kokun").push-leftImg
+								.column.is-3.mt2
+									h4.is-size-3 #{val}
+									p #{valoresText[index]}
+		
+		
+		
+		section.section
+			.container
+				.columns
+					.column.is-6: h2.text-green Nuestras instalaciones
+				.columns
+					.column.is-10.is-offset-1: p Contamos con una combinación de espacios contenidos que proveen Interacciones sociales y experiencias nuevas, exploración segura y el juego físico.
+			.columns.mt2: .column.is-10.is-offset-1
+				.columns.is-multiline
+					each img, index in [1,2,3,4,5]
+						.column.is-4
+							a(class='is-'+colorList[index], href='app/img/kokun-instalaciones-'+img+'.jpg', data-fancybox).instalaciones-item
+									figure.media: img(src='app/img/kokun-instalaciones-'+img+'.jpg', alt="Instalaciones Kokun").is-fluid
+									
+		
+		+contamoscon('is-orange')
+						
+		+footer
+		+scripts

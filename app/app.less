@@ -1,0 +1,219 @@
+@import "lib/_lesshat.less";
+
+@b: #333333;
+@g: #aaa;
+@w: #fff;
+@green: #97C748;
+@purple: #9C2465;
+@blue: #228FC8;
+@orange: #FD9A61;
+@red: #BA232B;
+
+.font{font-family: 'Poppins', sans-serif;} //300,400,700
+
+body{.font; }
+
+.topbar{
+  background: #000;
+  border-bottom: 2px solid @green;
+  font-size: 0.8em;
+  padding: 4px 0;
+  color:@w;
+  a{color:@w; &:hover{color:@green;}
+    i{line-height: 1.6; margin-right: 10px;} span{line-height: 1;}
+  }
+  .slogan,.topbar-text{display: inline-block; text-align: center; padding: 0 20px;}
+}
+
+.navbar{
+  .font;
+  font-weight: 300;
+  text-transform: uppercase;
+  .navbar-brand a{
+    padding: 0 20px;
+  }
+  .navbar-menu a{
+    &.active, &:hover{
+      position: relative;
+      background: transparent;
+      &:before{
+        content:"";
+        position: absolute;
+        height: 6px;
+        width: 100%;
+        top: 10px;
+        left: 0;
+        background: @purple;
+      }
+    }
+  }
+}
+
+
+
+.card.kokun-card{
+  border:none;
+  .box-shadow(none);
+  a.card-image{
+    .hovertext{
+      .opacity(0);
+      position: absolute;
+      left: 0; top: 0; right: 0; bottom: 0;
+      text-align: center;
+      line-height: 10;
+      .transition(all .5s);
+      &.is-blue{background: fade(@blue, 80%);}
+      &.is-green{background: fade(@green, 80%);}
+      &.is-purple{background: fade(@purple, 80%);}
+    }
+    &:hover{
+      .hovertext{
+        .opacity(1);
+        line-height: 11;
+        .transition(all .5s);
+
+      }
+    }
+  }
+
+}
+
+
+
+.footer{
+  background: none;
+  p{color:@g; font-size: 0.9rem;}
+  .fa{
+    width: 32px; height: 32px;
+    text-align: center;
+    line-height: 2;
+    .border-radius(50%);
+  }
+}
+
+
+
+
+
+ul{
+  li{
+    &:before{
+      content:"•";
+      color:@purple;
+      margin-right: 10px;
+      margin-left: 10px;
+    }
+  }
+}
+
+
+.contamoscon.is-purple{
+  background: @w;
+  color:@purple;
+  h2{color:@purple; &:after{background: @purple; }}
+}
+
+.award{
+  width: 140px;
+  height: 140px;
+  .border-radius(50%);
+  .box-shadow(0 4px 20px @blue/1.4);
+  margin: 0 auto;
+  text-align: center;
+  p{
+    line-height: 1.2;
+    font-size: 1.2rem;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+}
+
+.maps-container{
+  position: relative;
+
+  .maps-menu{
+    position: absolute;
+    bottom: 20px;
+    .slick-current{
+      background: @purple;
+    }
+    .slick-slide{
+      margin: 10px;
+      &:hover{
+        color:@w;
+        background: @green;
+      }
+    }
+  }
+}
+
+.push-leftImg{margin-left: -26px;}
+
+
+
+.slick-slide:focus{ outline:none; }
+
+.valores-slider-menu{
+  .slick-slide{cursor: pointer;}
+  .slick-active:after{
+    display: none;
+  }
+  .slick-current:after{
+    display: block;
+  }
+}
+
+.instalaciones-item{
+  display: block;
+  figure{ padding: 1rem; }
+}
+
+
+//HEADINGS
+.headers{font-size: 1.8rem; line-height: 1.2; font-weight: 400;}
+h2{
+  .headers;
+  &:after{
+    display: block; content:""; width: 40%; height: 5px;
+    background:@w/1.2; margin: 10px 0;
+  }
+  &.has-text-centered{&:after{margin: 10px auto;}}
+}
+h3{.headers; font-size: 1.5rem; }
+
+
+//COLOR HELPERS
+.is-purple{background: @purple; color:@w;}
+.is-blue{background: @blue; color:@w;}
+.is-green{background: @green; color:@w;}
+.is-orange{background: @orange; color:@w;}
+.is-red{background: @red; color:@w;}
+
+
+
+.text-blue{color:@blue; &:after{background: @blue;}}
+.text-red{color:@red; &:after{background: @red;}}
+.text-purple{color:@purple; &:after{background: @purple;}}
+.text-green{color:@green; &:after{background: @green;}}
+.text-orange{color:@orange; &:after{background: @orange;}}
+.text-white{color:@w; &:after{background: @w;}}
+.text-gray{color:@g; &:after{background: @g;}}
+
+
+.mt{margin-top: 20px;} .mb{margin-bottom: 20px;}
+.mt2{margin-top: 40px;} .mb2{margin-bottom: 40px;}
+
+.removal-bg{
+  .is-blue;
+}
+/*############# MEDIA QUERIES ########### */
+@media screen and(max-width:769px){
+  .navbar .navbar-menu a{
+    &.active, &:hover{
+      &:before{ top:0; height: 2px; }
+    }
+  }
+}

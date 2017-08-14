@@ -1,0 +1,54 @@
+include app/lib/_mixin
+
+doctype html
+html(lang="es")
+
+	+head
+		title guarderia | kinder | after school
+		meta(name="keywords" content="guarderia, kinder, after school, kinder")
+		meta(name="description" content="guarderia, kinder, after school, el kinder y after school de kokun es el kinder con mas seguridad el after school apoya a los padres de los niños que trabajan, para un buen kinder el kinder de kokun, con el after school con talleres el kinder en reforma con after school un kinder que tenga after school es lo que los padres necesitan, el kinder con after school un kinder para todos")
+		link(rel="canonical" href="http://kokundaycare.com.mx/guarderia.html")
+
+	body
+
+		+header('Servicios')
+
+
+		.container: .notification.is-orange.has-text-centered SOBRE NUESTROS SERVICIOS
+
+		section.section: .container
+			.columns
+				.column.is-6.is-offset-3: h2.has-text-centered.text-blue Trabajamos juntos desde hace 7 años en Kokun Daycare Río Rhín...
+			.columns
+				.column.is-5.is-offset-1
+					p Nos fusionamos con Aprendo Jugando AC consolidando así 43 años de experiencia, ofreciendo el mejor programa en educación temprana y preescolar abriendo así nuestra segunda sucursal en Polanco. Ofrecemos, cada vez a más niños, un lugar donde pueden crecer, jugar y aprender rodeados de amor
+					h4.text-purple.mt.mb.is-size-5 “Amplia Experiencia en Educación Temprana y Prescolar”
+
+				.column.is-5
+					p Kokun es un lugar altamente confiable, que provee consistentemente servicios de calidad a las familias y donde los niños son respetados en su desarrollo y fortalecidos en todas sus capacidades.
+					h4.text-blue.mt.mb.is-size-5.has-text-centered “Somos un equipo que ofrece la más altacalidad en Educación Temprana inicial y Prescolar en el desarrollo”
+					p de niños emocional y cognitivamente íntegros, contribuyendo en la formación de las bases fundamentales de un ser humano creativo y responsable de su entorno.
+
+
+		+serviciosOfrece('is-green')
+
+		section.section: .container
+			.columns
+				.column.is-8.is-offset-2: h2.text-orange.has-text-centered Somos especialistas en el desarrollo de habilidades socio-emocionales en la etapa temprana
+			.columns
+				.column.is-5.is-offset-1
+					img(src="app/img/kokun-desarrollo-de-habilidades.jpg", alt="Desarrollo de habilidades socio-emocionales").push-leftImg
+
+				.column.is-6
+					h3.text-green.mb Desarrollamos las principales áreas del aprendizaje infantil:
+					ul
+						li Área socio-emocional
+						li Área Física
+						li Área Cognoscitiva
+						li Área Lingüística
+
+
+		+contamoscon('is-blue')
+
+		+footer
+		+scripts

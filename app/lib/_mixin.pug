@@ -1,0 +1,151 @@
+- domain = "http://info@kokundaycare.com.mx/"
+- domain = ""
+
+- var colorList = ['blue', 'green', 'purple', 'orange', 'red','blue', 'green', 'purple', 'orange', 'red','blue', 'green', 'purple', 'orange', 'red','blue', 'green', 'purple', 'orange', 'red']
+
+
+
+mixin head
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    if block
+      block
+    
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.1/css/bulma.min.css")
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.css")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.min.css")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.css")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Poppins:300,400,700")
+    link(rel="stylesheet", type="text/css", href="app/app.css")
+    
+    link(rel="icon" type="image/png" href="favicon.png")
+
+
+mixin header(current)
+  .topbar
+    .columns
+      .column
+        span.slogan Guardería en Polanco
+        span.topbar-text: a(href="tel:68205500")
+          i.fa.fa-phone
+          span +52 (55) 6820 5500
+        span.topbar-text: a(href="mailto:info@kokundaycare.com.mx")
+          i.fa.fa-envelope
+          span info@kokundaycare.com.mx
+  section.section
+    .container
+      .navbar
+        .navbar-brand
+          a(href=domain): img(src="app/img/kokun-daycare-preschool.png", alt="KOKUN Daycare & Preschool")
+          .navbar-burger(data-target="#mainMenu")
+            span
+            span
+            span
+        .navbar-menu#mainMenu
+          nav.navbar-end
+            - var navItems = []
+            - navItems.push(['Nosotros', domain+'daycare-preschool.html'])
+            - navItems.push(['Servicios', domain+'guarderia.html'])
+            - navItems.push(['Playgroups',domain+'playgroups.html'])
+            - navItems.push(['Educación',domain+'educacion-infantil.html'])
+            - navItems.push(['Kokun Kids',domain+'talleres-infantiles.html'])
+            - navItems.push(['Contacto',domain+'cuidado-infantil.html'])
+            
+            each item in navItems
+              if(current == item[0])
+                a(href=item[1]).active.navbar-item #{item[0]}
+              else
+                a(href=item[1]).navbar-item #{item[0]}
+
+
+
+mixin contamoscon(bg)
+  section.section.contamoscon(class=bg)
+    .container
+      .columns
+        .column.is-6.is-offset-3: h2.has-text-centered.text-white Contamos con
+      .columns.is-multiline
+        each con, index in ['Paramédico', 'Seguro de AP Escolares', 'Programas inclusivos', 'Nutrición', 'Escuela para padres', 'Psicóloga', 'Playgroups', 'Evaluación trimestral']
+          .column.is-3.has-text-centered
+            - var iconito = index+1;
+            if(bg=='is-purple')
+              img(src="app/img/kokunicon_i"+iconito+".png", alt="Kokun")
+            else
+              img(src="app/img/kokunicon_"+iconito+".png", alt="Kokun")
+            p #{con}
+
+
+mixin serviciosOfrece(bg)
+  section.section(class=bg)
+    .container
+      .columns
+        .column: h2.text-white Los servicios que Kokun ofrece son
+    .columns.mt2: .column.is-10.is-offset-1: .columns
+      .columns
+        .column.is-4
+          .card.kokun-card
+            a(href="guarderia.html").card-image
+              figure.image
+                img(src="app/img/kokun-daycare.jpg", alt="DayCare")
+                .hovertext.is-blue
+                  p.is-size-3 Day Care
+            .card-content.has-text-centered
+              p.is-size-3.text-blue DayCare
+        .column.is-4
+          .card.kokun-card
+            a(href="guarderia.html").card-image
+              figure.image
+                img(src="app/img/kokun-after-school.jpg", alt="After School")
+                .hovertext.is-green
+                  p.is-size-3 After School
+            .card-content.has-text-centered
+              p.is-size-3.text-green After School
+              
+        .column.is-4
+          .card.kokun-card
+            a(href="guarderia.html").card-image
+              figure.image
+                img(src="app/img/kokun-talleres.jpg", alt="Talleres")
+                .hovertext.is-purple
+                  p.is-size-3 Talleres
+            .card-content.has-text-centered
+              p.is-size-3.text-purple Talleres
+
+
+
+
+
+
+
+mixin footer
+  img(src="app/img/ven-a-kokun.jpg", alt="Ven a Kokun").is-fluid
+  .is-purple
+    .container
+      .columns
+        .column.is-6.is-offset-3: h2.has-text-centered.text-white.mt2.mb2 55 33 75 10  y  55 33 86 61
+  footer.footer
+    .container
+      .columns
+        .column.is-4
+          h5.is-size-4.text-blue Sucursal Reforma
+          p Río Rhin No. 47, Col Cuahutémoc, <br> CP 06500, Ciudad de México, CDMX. <br>Tel. 55 33 75 10 y 55 33 86 61
+        .column.is-4
+          h5.is-size-4.text-blue Sucursal Polanco
+          p Calle Julio Verne 18, Polanco V Sec, <br> CP 11560 Ciudad de México, CDMX. <br> Tel. 5280 7514 
+        .column.is-4
+          h5.is-size-4.text-blue Contacto
+          .level
+            .level-item: a(href="https://www.facebook.com/KokunDayCare/" target="_blank").fa.fa-facebook.is-green
+            .level-item: a(href="https://twitter.com/kokundaycare" target="_blank").fa.fa-twitter.is-green
+            .level-item: a(href="https://plus.google.com/102833441639096713965" target="_blank").fa.fa-google-plus.is-green
+
+
+mixin scripts
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.js")
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.js")
+  script(src="app/app.js")
+
+  script(src="http://livejs.com/live.js")
